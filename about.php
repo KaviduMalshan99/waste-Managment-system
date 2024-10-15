@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || Wostin || Wostin HTML Template For Business </title>
+    <title> About Us || Wostin || Wostin HTML Template For Business </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -67,8 +67,7 @@
                         <div class="main-menu__menu-top-left">
                             <p class="main-menu__menu-top-text">Welcome To Waste Disposal & Pickup Services.</p>
                             <div class="main-menu__menu-top-btn-box">
-                                <a href="request-pickup.html" class="thm-btn main-menu__menu-top-btn">Request a
-                                    Pickup</a>
+                                <a href="about.html" class="thm-btn main-menu__menu-top-btn">Request a Pickup</a>
                             </div>
                         </div>
                         <div class="main-menu__menu-top-right">
@@ -99,6 +98,21 @@
                                 <ul class="main-menu__list">
                                     <li class="dropdown">
                                         <a href="index.html">Home</a>
+                                        <ul>
+                                            <li>
+                                                <a href="index.html">Home One</a>
+                                            </li>
+                                            <li><a href="index2.html">Home Two</a></li>
+                                            <li><a href="index3.html">Home Three</a></li>
+                                            <li class="dropdown">
+                                                <a href="#">Header Styles</a>
+                                                <ul>
+                                                    <li><a href="index.html">Header One</a></li>
+                                                    <li><a href="index2.html">Header Two</a></li>
+                                                    <li><a href="index3.html">Header Three</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <a href="about.html">About</a>
@@ -347,162 +361,36 @@
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
 
-        <!--Main Slider Start-->
-        <section class="main-slider">
-            <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
-                "effect": "fade",
-                "pagination": {
-                "el": "#main-slider-pagination",
-                "type": "bullets",
-                "clickable": true
-                },
-                "navigation": {
-                "nextEl": "#main-slider__swiper-button-next",
-                "prevEl": "#main-slider__swiper-button-prev"
-                },
-                "autoplay": {
-                "delay": 5000
-                }}'>
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="image-layer"
-                            style="background-image: url(assets/images/backgrounds/main-slider-1-1.jpg);">
-                        </div>
-                        <!-- /.image-layer -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <h2>Your Clutter is <br> Our Bread <span>&</span> Butter</h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="image-layer"
-                            style="background-image: url(assets/images/backgrounds/main-slider-1-2.jpg);">
-                        </div>
-                        <!-- /.image-layer -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <h2>Your Clutter is <br> Our Bread <span>&</span> Butter</h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="image-layer"
-                            style="background-image: url(assets/images/backgrounds/main-slider-1-3.jpg);">
-                        </div>
-                        <!-- /.image-layer -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <h2>Your Clutter is <br> Our Bread <span>&</span> Butter</h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="main-slider__nav">
-                    <div class="swiper-button-prev" id="main-slider__swiper-button-next">
-                        <i class="icon-right-arrow arrow-left"></i>
-                    </div>
-                    <div class="swiper-button-next" id="main-slider__swiper-button-prev">
-                        <i class="icon-right-arrow"></i>
-                    </div>
-                </div>
-
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
             </div>
-        </section>
-        <!--Main Slider End-->
-
-        <!--Feature One Start-->
-        <section class="feature-one">
             <div class="container">
-                <div class="feature-one__inner">
-                    <ul class="list-unstyled feature-one__list">
-                        <li class="feature-one__single wow fadeInUp" data-wow-delay="100ms">
-                            <div class="feature-one__icon">
-                                <span class="icon-budget"></span>
-                            </div>
-                            <h3 class="feature-one__title "><a href="about.html">You Estimate <br> Load Size</a></h3>
-                        </li>
-                        <li class="feature-one__single wow fadeInUp" data-wow-delay="200ms">
-                            <div class="feature-one__icon">
-                                <span class="icon-calendar"></span>
-                            </div>
-                            <h3 class="feature-one__title "><a href="about.html">You Choose <br> a Time</a></h3>
-                        </li>
-                        <li class="feature-one__single wow fadeInUp" data-wow-delay="300ms">
-                            <div class="feature-one__icon">
-                                <span class="icon-garbage"></span>
-                            </div>
-                            <h3 class="feature-one__title "><a href="about.html">We Pick <br> & Clean up</a></h3>
-                        </li>
-                        <li class="feature-one__single wow fadeInUp" data-wow-delay="400ms">
-                            <div class="feature-one__icon">
-                                <span class="icon-garbage-truck"></span>
-                            </div>
-                            <h3 class="feature-one__title "><a href="about.html">We Responsibily <br> dispose</a></h3>
-                        </li>
+                <div class="page-header__inner">
+                    <h2>About Us</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li>About</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <!--Feature One End-->
+        <!--Page Header End-->
 
-        <!--Leading Waste Start-->
-        <section class="leading-waste">
+        <!--Always Working Start-->
+        <section class="always-working">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6">
-                        <div class="leading-waste__left">
-                            <div class="leading-waste__img-box wow slideInLeft" data-wow-delay="100ms"
-                                data-wow-duration="2500ms">
-                                <div class="leading-waste__img">
-                                    <img src="assets/images/resources/leading-waste-img-1.jpg" alt="">
-                                </div>
-                                <div class="leading-waste__experience">
-                                    <p><span>18+</span> <br> Years of <br> Experience</p>
-                                </div>
-                                <div class="leading-waste__img-shape-1 float-bob-x">
-                                    <img src="assets/images/shapes/leading-waste-img-shape-1.png" alt="">
-                                </div>
-                                <div class="leading-waste__big-text">
-                                    <p>Wostin</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="leading-waste__right">
-                            <div class="leading-waste-dots">
-                                <img src="assets/images/shapes/leading-waste-dots.png" alt="">
-                            </div>
+                        <div class="always-working__left">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">Get to Know About Us</span>
-                                <h2 class="section-title__title">Leading in Waste disposal
-                                    Management Services</h2>
+                                <span class="section-title__tagline">About Wostin Company</span>
+                                <h2 class="section-title__title">Always Working for a Clean Tomorrow</h2>
                             </div>
-                            <p class="leading-waste__text">We’re in this business <span>Since 1987</span> and we provide
-                                the best services</p>
-                            <ul class="list-unstyled leading-waste__points">
+                            <p class="always-working__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.
+                            </p>
+                            <ul class="list-unstyled always-working__points">
                                 <li>
                                     <div class="icon">
                                         <span class="fa fa-check"></span>
@@ -519,443 +407,35 @@
                                         <p>Making this the first true generator on the Internet</p>
                                     </div>
                                 </li>
+                            </ul>
+                            <ul class="list-unstyled always-working__bottom">
                                 <li>
-                                    <div class="icon">
-                                        <span class="fa fa-check"></span>
+                                    <div class="always-working__count"></div>
+                                    <div class="always-working__content">
+                                        <h3>Going Above <br> and Beyond</h3>
                                     </div>
-                                    <div class="text">
-                                        <p>Various versions have evolved over the years</p>
+                                </li>
+                                <li>
+                                    <div class="always-working__count"></div>
+                                    <div class="always-working__content">
+                                        <h3>Committed to <br> People First</h3>
                                     </div>
                                 </li>
                             </ul>
-                            <a href="about.html" class="thm-btn">Discover More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Leading Waste End-->
-
-        <!--Industries One Start-->
-        <section class="industries-one">
-            <div class="industries-one-bg"
-                style="background-image: url(assets/images/backgrounds/industries-one-bg.jpg);"></div>
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">We Cover Industries</span>
-                    <h2 class="section-title__title">Industries We Served</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <!--Industries One Single-->
-                        <div class="industries-one__single">
-                            <div class="industries-one__img">
-                                <img src="assets/images/resources/industries-1-1.jpg" alt="">
-                            </div>
-                            <div class="industries-one__content">
-                                <div class="industries-one__icon">
-                                    <span class="icon-shop"></span>
-                                </div>
-                                <h3 class="industries-one__title"><a href="industry-details.html">Hotel & Restaurant</a>
-                                </h3>
-                                <p class="industries-one__text">Sed quia magni dolores eos ratione voluptatem sequi
-                                    site, qui nesciunt eque sit porro.</p>
-                                <div class="industries-one__arrow">
-                                    <a href="industry-details.html">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <!--Industries One Single-->
-                        <div class="industries-one__single">
-                            <div class="industries-one__img">
-                                <img src="assets/images/resources/industries-1-2.jpg" alt="">
-                            </div>
-                            <div class="industries-one__content">
-                                <div class="industries-one__icon">
-                                    <span class="icon-stethoscope"></span>
-                                </div>
-                                <h3 class="industries-one__title"><a href="industry-details.html">Medical & Hospital</a>
-                                </h3>
-                                <p class="industries-one__text">Sed quia magni dolores eos ratione voluptatem sequi
-                                    site, qui nesciunt eque sit porro.</p>
-                                <div class="industries-one__arrow">
-                                    <a href="industry-details.html">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <!--Industries One Single-->
-                        <div class="industries-one__single">
-                            <div class="industries-one__img">
-                                <img src="assets/images/resources/industries-1-3.jpg" alt="">
-                            </div>
-                            <div class="industries-one__content">
-                                <div class="industries-one__icon">
-                                    <span class="icon-grocery"></span>
-                                </div>
-                                <h3 class="industries-one__title"><a href="industry-details.html">Grocery Stores</a>
-                                </h3>
-                                <p class="industries-one__text">Sed quia magni dolores eos ratione voluptatem sequi
-                                    site, qui nesciunt eque sit porro.</p>
-                                <div class="industries-one__arrow">
-                                    <a href="industry-details.html">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Industries One End-->
-
-        <!--We Dedicated Start-->
-        <section class="we-dedicated">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="we-dedicated__left">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">Our Skills & Expertise</span>
-                                <h2 class="section-title__title">We are Dedicated to Serve you all Our Time</h2>
-                            </div>
-                            <p class="we-dedicated__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.</p>
-                            <div class="we-dedicated__progress">
-                                <div class="we-dedicated__progress-single">
-                                    <h4 class="we-dedicated__progress-title">Waste Management</h4>
-                                    <div class="bar">
-                                        <div class="bar-inner count-bar" data-percent="90%">
-                                            <div class="count-text">90%</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="we-dedicated__progress-single">
-                                    <h4 class="we-dedicated__progress-title">Recycling</h4>
-                                    <div class="bar marb-0">
-                                        <div class="bar-inner count-bar" data-percent="46%">
-                                            <div class="count-text">46%</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
-                        <div class="we-dedicated__right">
-                            <div class="we-dedicated__img-box wow slideInRight" data-wow-delay="100ms"
+                        <div class="always-working__right">
+                            <div class="always-working__img wow slideInRight" data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
-                                <img src="assets/images/resources/we-dedicated-img.jpg" alt="">
-                                <div class="we-dedicated__video-link">
-                                    <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                        <div class="we-dedicated__video-icon">
-                                            <span class="fa fa-play"></span>
-                                            <i class="ripple"></i>
-                                        </div>
-                                    </a>
-                                </div>
+                                <img src="assets/images/resources/always-working-img.jpg" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--We Dedicated End-->
-
-        <!--Counter One Start-->
-        <section class="counter-one">
-            <div class="counter-one-bg-box">
-                <div class="counter-one-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                    style="background-image: url(assets/images/backgrounds/counter-one-bg.jpg);"></div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4">
-                        <!--Counter One Single-->
-                        <div class="counter-one__single">
-                            <div class="counter-one__top">
-                                <div class="counter-one__count">
-                                    <h2 class="odometer" data-count="260">00</h2><span
-                                        class="counter-one__plus">+</span>
-                                </div>
-                                <div class="counter-one__icon">
-                                    <span class="icon-recycling-symbol"></span>
-                                </div>
-                            </div>
-                            <h3 class="counter-one__title">Industries Served</h3>
-                            <p class="counter-one__text">Lorem Ipsum is simply dummy <br> ext of the new design.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <!--Counter One Single-->
-                        <div class="counter-one__single">
-                            <div class="counter-one__top">
-                                <div class="counter-one__count">
-                                    <h2 class="odometer" data-count="3600">00</h2>
-                                </div>
-                                <div class="counter-one__icon">
-                                    <span class="icon-recycling-symbol"></span>
-                                </div>
-                            </div>
-                            <h3 class="counter-one__title">Wast Picked Up</h3>
-                            <p class="counter-one__text">Lorem Ipsum is simply dummy <br> ext of the new design.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <!--Counter One Single-->
-                        <div class="counter-one__single">
-                            <div class="counter-one__top">
-                                <div class="counter-one__count">
-                                    <h2 class="odometer" data-count="890">00</h2><span
-                                        class="counter-one__plus">+</span>
-                                </div>
-                                <div class="counter-one__icon">
-                                    <span class="icon-recycling-symbol"></span>
-                                </div>
-                            </div>
-                            <h3 class="counter-one__title">Happy Customers</h3>
-                            <p class="counter-one__text">Lorem Ipsum is simply dummy <br> ext of the new design.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Counter One End-->
-
-        <!--Services One Start-->
-        <section class="services-one">
-            <div class="container">
-                <div class="services-one__top">
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-7">
-                            <div class="services-one__top-left">
-                                <div class="section-title text-left">
-                                    <span class="section-title__tagline">What We’re Offering</span>
-                                    <h2 class="section-title__title">The Services We’re Providing <br> to Our Customers
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-5">
-                            <div class="services-one__top-right">
-                                <p class="services-one__top-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. quis nostrud
-                                    exercitation ullamco laboris.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="services-one__bottom">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                            <!--Services One Single-->
-                            <div class="services-one__single">
-                                <div class="services-one__img-box">
-                                    <div class="services-one__img">
-                                        <img src="assets/images/services/services-1-1.jpg" alt="">
-                                    </div>
-                                    <div class="services-one__icon">
-                                        <span class="icon-garbage-1"></span>
-                                    </div>
-                                </div>
-                                <div class="services-one__content-box">
-                                    <div class="services-one__content">
-                                        <h3 class="services-one__title"><a href="zero-waste.html">Zero Waste</a></h3>
-                                    </div>
-                                    <div class="services-one__hover">
-                                        <h3 class="services-one__hover-title"><a href="zero-waste.html">Zero Waste</a>
-                                        </h3>
-                                        <p class="services-one__hover-text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <!--Services One Single-->
-                            <div class="services-one__single">
-                                <div class="services-one__img-box">
-                                    <div class="services-one__img">
-                                        <img src="assets/images/services/services-1-2.jpg" alt="">
-                                    </div>
-                                    <div class="services-one__icon">
-                                        <span class="icon-dumpster"></span>
-                                    </div>
-                                </div>
-                                <div class="services-one__content-box">
-                                    <div class="services-one__content">
-                                        <h3 class="services-one__title"><a href="dumpster-rental.html">Dumpster
-                                                Rental</a></h3>
-                                    </div>
-                                    <div class="services-one__hover">
-                                        <h3 class="services-one__hover-title"><a href="dumpster-rental.html">Dumpster
-                                                Rental</a></h3>
-                                        <p class="services-one__hover-text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                            <!--Services One Single-->
-                            <div class="services-one__single">
-                                <div class="services-one__img-box">
-                                    <div class="services-one__img">
-                                        <img src="assets/images/services/services-1-3.jpg" alt="">
-                                    </div>
-                                    <div class="services-one__icon">
-                                        <span class="icon-portable-toilets"></span>
-                                    </div>
-                                </div>
-                                <div class="services-one__content-box">
-                                    <div class="services-one__content">
-                                        <h3 class="services-one__title"><a href="portable-toilet.html">Portable
-                                                Toilet</a></h3>
-                                    </div>
-                                    <div class="services-one__hover">
-                                        <h3 class="services-one__hover-title"><a href="portable-toilet.html">Portable
-                                                Toilet</a></h3>
-                                        <p class="services-one__hover-text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <!--Services One Single-->
-                            <div class="services-one__single">
-                                <div class="services-one__img-box">
-                                    <div class="services-one__img">
-                                        <img src="assets/images/services/services-1-4.jpg" alt="">
-                                    </div>
-                                    <div class="services-one__icon">
-                                        <span class="icon-triangular-arrows-sign-for-recycle"></span>
-                                    </div>
-                                </div>
-                                <div class="services-one__content-box">
-                                    <div class="services-one__content">
-                                        <h3 class="services-one__title"><a href="recylcing-services.html">Recycling
-                                                Service</a></h3>
-                                    </div>
-                                    <div class="services-one__hover">
-                                        <h3 class="services-one__hover-title"><a
-                                                href="recylcing-services.html">Recycling Service</a></h3>
-                                        <p class="services-one__hover-text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Services One End-->
-
-        <!--Have Waste Start-->
-        <section class="have-waste">
-            <div class="container">
-                <div class="have-waste__inner wow fadeInUp" data-wow-delay="100ms">
-                    <div class="have-waste__left">
-                        <h3 class="have-waste__content">Have Waste/Pickup?</h3>
-                        <div class="have-waste__icon">
-                            <span class="icon-phone-ringing"></span>
-                        </div>
-                    </div>
-                    <div class="have-waste__right">
-                        <h4 class="have-waste__contact-info">
-                            <span class="have-waste__contact-text">Lorem ipsum dolor sit am cons sid</span>
-                            <a href="tel:12463330079" class="have-waste__contact-number">+1- ( 246 ) 333 -0079</a>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Have Waste End-->
-
-        <!--Project One Start-->
-        <section class="project-one">
-            <div class="project-one-bg-box">
-                <div class="project-one-bg" style="background-image: url(assets/images/backgrounds/project-one-bg.jpg)">
-                </div>
-            </div>
-            <div class="project-one__container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Recent Closed Projects</span>
-                    <h2 class="section-title__title">Recently We Successfully Completed <br> Some Waste Projects</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                        <!--Project One Single-->
-                        <div class="project-one__single">
-                            <div class="project-one__img">
-                                <img src="assets/images/resources/project-1-1.jpg" alt="">
-                            </div>
-                            <div class="project-one__content">
-                                <p class="project-one__sub-title">Waste Pickup</p>
-                                <h3 class="project-one__title"><a href="project-details.html">Grocery Waste Removal</a>
-                                </h3>
-                                <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <!--Project One Single-->
-                        <div class="project-one__single">
-                            <div class="project-one__img">
-                                <img src="assets/images/resources/project-1-2.jpg" alt="">
-                            </div>
-                            <div class="project-one__content">
-                                <p class="project-one__sub-title">Waste Pickup</p>
-                                <h3 class="project-one__title"><a href="project-details.html">Home Trash Picked</a></h3>
-                                <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <!--Project One Single-->
-                        <div class="project-one__single">
-                            <div class="project-one__img">
-                                <img src="assets/images/resources/project-1-3.jpg" alt="">
-                            </div>
-                            <div class="project-one__content">
-                                <p class="project-one__sub-title">Waste Pickup</p>
-                                <h3 class="project-one__title"><a href="project-details.html">Construction
-                                        Collection</a></h3>
-                                <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <!--Project One Single-->
-                        <div class="project-one__single">
-                            <div class="project-one__img">
-                                <img src="assets/images/resources/project-1-4.jpg" alt="">
-                            </div>
-                            <div class="project-one__content">
-                                <p class="project-one__sub-title">Waste Pickup</p>
-                                <h3 class="project-one__title"><a href="project-details.html">Business Waste Pickup</a>
-                                </h3>
-                                <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Project One End-->
+        <!--Always Working End-->
 
         <!--Brand One Start-->
         <section class="brand-one">
@@ -1022,6 +502,29 @@
             </div>
         </section>
         <!--Brand One End-->
+
+        <!--Manage Waste Two Start-->
+        <section class="manage-waste manage-waste-two">
+            <div class="manage-waste-bg-box">
+                <div class="manage-waste-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                    style="background-image: url(assets/images/backgrounds/manage-waste-bg.jpg);"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="manage-waste__inner">
+                            <h3 class="manage-waste__title">Manage Waste Effectively <br> and Reduce Environmental
+                                Impact</h3>
+                            <div class="manage-waste__btn-box">
+                                <a href="request-pickup.html" class="thm-btn manage-waste__btn-1">Request a Pickup</a>
+                                <a href="contact.html" class="thm-btn manage-waste__btn-2">Contact With us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Manage Waste Two End-->
 
         <!--Testimonial One Start-->
         <section class="testimonial-one">
@@ -1187,94 +690,88 @@
         </section>
         <!--Testimonial One End-->
 
-        <!--News One Start-->
-        <section class="news-one">
+        <!--Team One Start-->
+        <section class="team-one">
             <div class="container">
                 <div class="section-title text-center">
-                    <span class="section-title__tagline">What’s Happening</span>
-                    <h2 class="section-title__title">Latest News & Articles</h2>
+                    <span class="section-title__tagline">Team Behind Success</span>
+                    <h2 class="section-title__title">Expert Staff & Members</h2>
                 </div>
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <!--News One Single-->
-                        <div class="news-one__single">
-                            <div class="news-one__img">
-                                <img src="assets/images/blog/news-1-1.jpg" alt="">
-                                <div class="news-one__date">
-                                    <p>20 Dec</p>
+                        <!--Team One Single-->
+                        <div class="team-one__sngle">
+                            <div class="team-one__img">
+                                <img src="assets/images/team/team-1-1.jpg" alt="">
+                                <div class="team-one__shape">
+                                    <img src="assets/images/shapes/team-one-shape.png" alt="">
                                 </div>
-                                <a href="news-details.html">
-                                    <span class="news-one__plus"></span>
-                                </a>
                             </div>
-                            <div class="news-one__content">
-                                <ul class="list-unstyled news-one__meta">
-                                    <li><a href="news-details.html"><i class="far fa-clock"></i> by Admin </a>
-                                    </li>
-                                    <li><span>/</span></li>
-                                    <li><a href="news-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3 class="news-one__title"><a href="news-details.html">Waste Management Container or
-                                        Bin for my Home?</a></h3>
-                                <div class="news-one__read-more">
-                                    <a href="news-details.html"><i class="fa fa-arrow-right"></i>Read More</a>
+                            <div class="team-one__content">
+                                <p class="team-one__title">Accountant</p>
+                                <h3 class="team-one__name">Kevin Martin</h3>
+                                <div class="team-one__social-box">
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="team-one__arrow">
+                                        <a href="staff-details.html"><i class="fa fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <!--News One Single-->
-                        <div class="news-one__single">
-                            <div class="news-one__img">
-                                <img src="assets/images/blog/news-1-2.jpg" alt="">
-                                <div class="news-one__date">
-                                    <p>20 Dec</p>
+                        <!--Team One Single-->
+                        <div class="team-one__sngle">
+                            <div class="team-one__img">
+                                <img src="assets/images/team/team-1-2.jpg" alt="">
+                                <div class="team-one__shape">
+                                    <img src="assets/images/shapes/team-one-shape.png" alt="">
                                 </div>
-                                <a href="news-details.html">
-                                    <span class="news-one__plus"></span>
-                                </a>
                             </div>
-                            <div class="news-one__content">
-                                <ul class="list-unstyled news-one__meta">
-                                    <li><a href="news-details.html"><i class="far fa-clock"></i> by Admin </a>
-                                    </li>
-                                    <li><span>/</span></li>
-                                    <li><a href="news-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3 class="news-one__title"><a href="news-details.html">Leverage agile frameworks to
-                                        provide best service</a></h3>
-                                <div class="news-one__read-more">
-                                    <a href="news-details.html"><i class="fa fa-arrow-right"></i>Read More</a>
+                            <div class="team-one__content">
+                                <p class="team-one__title">Co Founder</p>
+                                <h3 class="team-one__name">Jessica Brown</h3>
+                                <div class="team-one__social-box">
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="team-one__arrow">
+                                        <a href="staff-details.html"><i class="fa fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <!--News One Single-->
-                        <div class="news-one__single">
-                            <div class="news-one__img">
-                                <img src="assets/images/blog/news-1-3.jpg" alt="">
-                                <div class="news-one__date">
-                                    <p>20 Dec</p>
+                        <!--Team One Single-->
+                        <div class="team-one__sngle">
+                            <div class="team-one__img">
+                                <img src="assets/images/team/team-1-3.jpg" alt="">
+                                <div class="team-one__shape">
+                                    <img src="assets/images/shapes/team-one-shape.png" alt="">
                                 </div>
-                                <a href="news-details.html">
-                                    <span class="news-one__plus"></span>
-                                </a>
                             </div>
-                            <div class="news-one__content">
-                                <ul class="list-unstyled news-one__meta">
-                                    <li><a href="news-details.html"><i class="far fa-clock"></i> by Admin </a>
-                                    </li>
-                                    <li><span>/</span></li>
-                                    <li><a href="news-details.html"><i class="far fa-comments"></i> 2 Comments</a>
-                                    </li>
-                                </ul>
-                                <h3 class="news-one__title"><a href="news-details.html">Bring to the table win-win
-                                        survival strategis to identify</a></h3>
-                                <div class="news-one__read-more">
-                                    <a href="news-details.html"><i class="fa fa-arrow-right"></i>Read More</a>
+                            <div class="team-one__content">
+                                <p class="team-one__title">Senior Assistant</p>
+                                <h3 class="team-one__name">David Cooper</h3>
+                                <div class="team-one__social-box">
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="team-one__arrow">
+                                        <a href="staff-details.html"><i class="fa fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1282,7 +779,76 @@
                 </div>
             </div>
         </section>
-        <!--News One End-->
+        <!--Team One End-->
+
+        <!--Why Choose One Start-->
+        <section class="why-choose-one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5">
+                        <div class="why-choose-one__left">
+                            <div class="why-choose-one__img">
+                                <img src="assets/images/resources/why-choose-one-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7">
+                        <div class="why-choose-one__right">
+                            <div class="why-choose-one__content">
+                                <h3 class="why-choose-one__title">Why Choose Wostin?</h3>
+                                <p class="why-choose-one__text">There are many variations of passages of Lorem Ipsum
+                                    available, but the majority have suffered alteration in some form, by injected
+                                    humour.</p>
+                                <ul class="list-unstyled why-choose-one__points">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fa fa-check"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Donec fermentum leo id elit commodo, vel sodales</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fa fa-check"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Nullam a consequat diam, id pharetra massa</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fa fa-check"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Praesent porttitor enim quis risus gravida</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Why Choose One End-->
+
+        <!--CTA One Start-->
+        <section class="cta-one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="cta-one__inner">
+                            <h2 class="cta-one__title">Do You Have Home or Business Waste?</h2>
+                            <div class="cta-one__btn-box">
+                                <a href="request-pickup.html" class="thm-btn cta-one__btn">Request a Pickup</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--CTA One  End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -1392,7 +958,7 @@
     </div><!-- /.page-wrapper -->
 
 
-    <div class="mobile-nav__wrapper ">
+    <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
         <!-- /.mobile-nav__overlay -->
         <div class="mobile-nav__content">
