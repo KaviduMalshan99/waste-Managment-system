@@ -28,7 +28,7 @@
                             <a href="invoice-list.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Waste Type Breakdown</a>
                         </li>
                         <li>
-                            <a href="invoice-preview.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Waste Types</a>
+                            <a href="waste-types.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Waste Types</a>
                         </li>
                         <li>
                             <a href="invoice-add.php"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> Waste Type Packages</a>
