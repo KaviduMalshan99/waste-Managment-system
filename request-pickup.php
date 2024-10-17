@@ -448,7 +448,7 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-form-box">
-                                    <form class="request-a-pickup__tab-content-form">
+                                    <form action="submit_pickup.php" method="POST" class="request-a-pickup__tab-content-form">
                                         <div class="row">
                                             <div class="col-xl-12">
                                                 <div class="request-a-pickup__tab-content-input-box">
@@ -542,7 +542,7 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-form-box">
-                                    <form class="request-a-pickup__tab-content-form">
+                                    <form action="submit_pickup.php" method="POST" class="request-a-pickup__tab-content-form">
                                         <div class="row">
                                             <div class="col-xl-12">
                                                 <div class="request-a-pickup__tab-content-input-box">
@@ -636,7 +636,7 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-form-box">
-                                    <form class="request-a-pickup__tab-content-form">
+                                    <form action="submit_pickup.php" method="POST" class="request-a-pickup__tab-content-form">
                                         <div class="row">
                                             <div class="col-xl-12">
                                                 <div class="request-a-pickup__tab-content-input-box">
