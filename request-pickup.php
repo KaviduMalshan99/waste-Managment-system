@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Request a Pickup || Wostin || Wostin HTML Template For Business </title>
+    <title> Request a Pickup </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -49,6 +53,34 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/wostin.css" />
     <link rel="stylesheet" href="assets/css/wostin-responsive.css" />
+    <style>
+        .custom-time-picker {
+            width: 100%;
+
+            padding: 17px 15px;
+            border: 1px solid #ddd;
+            background-color: #f5f0e9;
+            color: #333;
+            font-size: 16px;
+            font-family: 'DM Sans', sans-serif;
+            border:none;
+            border-radius: 0px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .custom-time-picker::-webkit-calendar-picker-indicator {
+            background-color: transparent;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .custom-time-picker:focus {
+            outline: none;
+            border-color: #ff3c00;
+        }
+    </style>
 </head>
 
 <body>
@@ -78,7 +110,7 @@
                                         <span class="icon-email"></span>
                                     </div>
                                     <div class="text">
-                                        <p><a href="mailto:needhelp@company.com">needhelp@wostin.com</a></p>
+                                        <p><a href="mailto:needhelp@company.com">needhelp@waste.com</a></p>
                                     </div>
                                 </li>
                                 <li>
@@ -395,522 +427,379 @@
         </section>
         <!--Request A Pickup Top End-->
 
-        <!--Request A Pickup Start-->
-        <section class="request-a-pickup">
-            <div class="container">
-                <div class="request-a-pickup__tab-box tabs-box">
-                    <ul class="tab-buttons clearfix list-unstyled">
-                        <li data-tab="#bagster" class="tab-btn"><span>Bagster</span></li>
-                        <li data-tab="#containers" class="tab-btn active-btn"><span>Containers</span></li>
-                        <li data-tab="#dumpster" class="tab-btn"><span>Dumpster</span></li>
-                    </ul>
-                    <div class="tabs-content">
-                        <!--tab-->
-                        <div class="tab" id="bagster">
-
-                            <div class="request-a-pickup__tab-content">
-                                <div class="request-a-pickup__tab-content-size-box">
-                                    <ul class="list-unstyled request-a-pickup__tab-content-size-list">
-                                        <li>
-                                            <input type="checkbox" name="32_gallon" id="option_1" checked="">
-                                            <label for="option_1"><span></span>32 Gallon</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="64_gallon" id="option_2">
-                                            <label for="option_2"><span></span>64 Gallon</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="96_gallon" id="option_3">
-                                            <label for="option_3"><span></span>96 Gallon</label>
-                                        </li>
-                                    </ul>
-                                </div>
+<!--Request A Pickup Start-->
+<section class="request-a-pickup">
+    <div class="container">
+        <div class="request-a-pickup__tab-box tabs-box">
+            <ul class="tab-buttons clearfix list-unstyled">
+                <li data-tab="#bagster" class="tab-btn"><span>Bagster</span></li>
+                <li data-tab="#containers" class="tab-btn active-btn"><span>Containers</span></li>
+                <li data-tab="#dumpster" class="tab-btn"><span>Dumpster</span></li>
+            </ul>
+            <div class="tabs-content">
+                <!-- Bagster Tab -->
+                <div class="tab" id="bagster">
+                    <div class="request-a-pickup__tab-content">
+                        <div class="row">
+                            <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-img">
                                     <img src="assets/images/resources/request-a-pickup-tab-content-img-1.jpg" alt="">
                                 </div>
+                            </div>
+                            <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-form-box">
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <div class="request-a-pickup__tab-content-form-left">
-                                                <form class="request-a-pickup__tab-content-form">
-                                                    <div class="row">
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <select class="selectpicker"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Waste Type</option>
-                                                                    <option value="1">32 Gallon</option>
-                                                                    <option value="2">64 Gallon</option>
-                                                                    <option value="3">96 Gallon</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="First Name" name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Last Name" name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text"
-                                                                    placeholder="Company Name (If Applicable)"
-                                                                    name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <select class="selectpicker"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Company Type (If Applicable)
-                                                                    </option>
-                                                                    <option value="1">Select Company</option>
-                                                                    <option value="2">Select Company</option>
-                                                                    <option value="3">Select Company</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Street Address"
-                                                                    name="Address">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Post Code"
-                                                                    name="post-code">
-                                                            </div>
-                                                        </div>
-                                                        <p class="request-a-pickup__tab-content-text-box">Please let us
-                                                            know if you think there may be an extras required over the
-                                                            allowance guide.</p>
-                                                        <div class="request-a-pickup__tab-content-extra">
-                                                            <ul
-                                                                class="list-unstyled request-a-pickup__tab-content-extra-list">
-                                                                <li>
-                                                                    <input type="checkbox" name="extra_weight"
-                                                                        id="extra_weight_1" checked="">
-                                                                    <label for="extra_weight_1"><span></span>Extra
-                                                                        Weight Over Allowance</label>
-                                                                </li>
-                                                                <li>
-                                                                    <input type="checkbox" name="extra_labour"
-                                                                        id="extra_labour_1">
-                                                                    <label for="extra_labour_1"><span></span>Extra
-                                                                        Labour Over Allowance</label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div
-                                                                class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-message-box">
-                                                                <textarea placeholder="Other Comments"
-                                                                    name="message"></textarea>
-                                                            </div>
-                                                            <div class="request-a-pickup__tab-content-btn-box">
-                                                                <button type="submit"
-                                                                    class="thm-btn request-a-pickup__tab-content-btn">Order
-                                                                    Now</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                    <form class="request-a-pickup__tab-content-form">
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <select class="selectpicker" aria-label="Default select example" name="waste_type_bagster">
+                                                        <option selected>Select Waste Type</option>
+                                                        <option value="1">32 Gallon</option>
+                                                        <option value="2">64 Gallon</option>
+                                                        <option value="3">96 Gallon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="First Name" name="first_name_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Last Name" name="last_name_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Company Name (If Applicable)" name="company_name_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Street Address" name="address_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Post Code" name="post_code_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-brief-box">
+                                                    <textarea placeholder="Brief description of waste to be removed" name="description_bagster"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="email" placeholder="Email Address" name="email_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Subject" name="subject_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Pick Up Date" name="date_bagster" id="datepicker_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="time" class="custom-time-picker" placeholder="Pick Up Time" name="time_bagster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h4>Choose Your Location</h4>
+                                            </div>
+                                            <div class="col-xl-12" style="margin-bottom: 20px;">
+                                                <div id="map-bagster" style="height: 400px; width: 100%; border: 1px solid #ddd;"></div>
+                                                <input type="hidden" id="latitude-bagster" name="latitude_bagster">
+                                                <input type="hidden" id="longitude-bagster" name="longitude_bagster">
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-btn-box">
+                                                    <button type="submit" class="thm-btn request-a-pickup__tab-content-btn">Order Now</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-6">
-                                            <div class="request-a-pickup__tab-content-form-right">
-                                                <form class="request-a-pickup__tab-content-form-two">
-                                                    <div class="row">
-                                                        <div class="col-xl-12">
-                                                            <div
-                                                                class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-brief-box">
-                                                                <textarea
-                                                                    placeholder="Brief description of waste to be removed"
-                                                                    name="message"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="email" placeholder="Email Address"
-                                                                    name="email">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Subject" name="subject">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Pick Up Date"
-                                                                    name="date" id="datepicker">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" name="time"
-                                                                    placeholder="Pick Up Time">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="url"
-                                                                    placeholder="Upload File Including Photos or Videos">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
-
-                        </div>
-                        <!--tab-->
-                        <div class="tab active-tab" id="containers">
-
-                            <div class="request-a-pickup__tab-content">
-                                <div class="request-a-pickup__tab-content-size-box">
-                                    <ul class="list-unstyled request-a-pickup__tab-content-size-list">
-                                        <li>
-                                            <input type="checkbox" name="32_gallon" id="option_4" checked="">
-                                            <label for="option_4"><span></span>32 Gallon</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="64_gallon" id="option_5">
-                                            <label for="option_5"><span></span>64 Gallon</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="96_gallon" id="option_6">
-                                            <label for="option_6"><span></span>96 Gallon</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="request-a-pickup__tab-content-img">
-                                    <img src="assets/images/resources/request-a-pickup-tab-content-img-2.jpg" alt="">
-                                </div>
-                                <div class="request-a-pickup__tab-content-form-box">
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <div class="request-a-pickup__tab-content-form-left">
-                                                <form class="request-a-pickup__tab-content-form">
-                                                    <div class="row">
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <select class="selectpicker"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Waste Type</option>
-                                                                    <option value="1">32 Gallon</option>
-                                                                    <option value="2">64 Gallon</option>
-                                                                    <option value="3">96 Gallon</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="First Name" name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Last Name" name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text"
-                                                                    placeholder="Company Name (If Applicable)"
-                                                                    name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <select class="selectpicker"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Company Type (If Applicable)
-                                                                    </option>
-                                                                    <option value="1">Select Company</option>
-                                                                    <option value="2">Select Company</option>
-                                                                    <option value="3">Select Company</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Street Address"
-                                                                    name="Address">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Post Code"
-                                                                    name="post-code">
-                                                            </div>
-                                                        </div>
-                                                        <p class="request-a-pickup__tab-content-text-box">Please let us
-                                                            know if you think there may be an extras required over the
-                                                            allowance guide.</p>
-                                                        <div class="request-a-pickup__tab-content-extra">
-                                                            <ul
-                                                                class="list-unstyled request-a-pickup__tab-content-extra-list">
-                                                                <li>
-                                                                    <input type="checkbox" name="extra_weight"
-                                                                        id="extra_weight_2" checked="">
-                                                                    <label for="extra_weight_2"><span></span>Extra
-                                                                        Weight Over Allowance</label>
-                                                                </li>
-                                                                <li>
-                                                                    <input type="checkbox" name="extra_labour"
-                                                                        id="extra_labour_2">
-                                                                    <label for="extra_labour_2"><span></span>Extra
-                                                                        Labour Over Allowance</label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div
-                                                                class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-message-box">
-                                                                <textarea placeholder="Other Comments"
-                                                                    name="message"></textarea>
-                                                            </div>
-                                                            <div class="request-a-pickup__tab-content-btn-box">
-                                                                <button type="submit"
-                                                                    class="thm-btn request-a-pickup__tab-content-btn">Order
-                                                                    Now</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="request-a-pickup__tab-content-form-right">
-                                                <form class="request-a-pickup__tab-content-form-two">
-                                                    <div class="row">
-                                                        <div class="col-xl-12">
-                                                            <div
-                                                                class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-brief-box">
-                                                                <textarea
-                                                                    placeholder="Brief description of waste to be removed"
-                                                                    name="message"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="email" placeholder="Email Address"
-                                                                    name="email">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Subject" name="subject">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Pick Up Date"
-                                                                    name="date" id="datepicker3">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" name="time"
-                                                                    placeholder="Pick Up Time">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="url"
-                                                                    placeholder="Upload File Including Photos or Videos">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!--tab-->
-                        <div class="tab " id="dumpster">
-                            <div class="request-a-pickup__tab-content">
-                                <div class="request-a-pickup__tab-content-size-box">
-                                    <ul class="list-unstyled request-a-pickup__tab-content-size-list">
-                                        <li>
-                                            <input type="checkbox" name="32_gallon" id="option_7" checked="">
-                                            <label for="option_7"><span></span>32 Gallon</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="64_gallon" id="option_8">
-                                            <label for="option_8"><span></span>64 Gallon</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="96_gallon" id="option_9">
-                                            <label for="option_8"><span></span>96 Gallon</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="request-a-pickup__tab-content-img">
-                                    <img src="assets/images/resources/request-a-pickup-tab-content-img-3.jpg" alt="">
-                                </div>
-                                <div class="request-a-pickup__tab-content-form-box">
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <div class="request-a-pickup__tab-content-form-left">
-                                                <form class="request-a-pickup__tab-content-form">
-                                                    <div class="row">
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <select class="selectpicker"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Waste Type</option>
-                                                                    <option value="1">32 Gallon</option>
-                                                                    <option value="2">64 Gallon</option>
-                                                                    <option value="3">96 Gallon</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="First Name" name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Last Name" name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text"
-                                                                    placeholder="Company Name (If Applicable)"
-                                                                    name="name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <select class="selectpicker"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Company Type (If Applicable)
-                                                                    </option>
-                                                                    <option value="1">Select Company</option>
-                                                                    <option value="2">Select Company</option>
-                                                                    <option value="3">Select Company</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Street Address"
-                                                                    name="Address">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Post Code"
-                                                                    name="post-code">
-                                                            </div>
-                                                        </div>
-                                                        <p class="request-a-pickup__tab-content-text-box">Please let us
-                                                            know if you think there may be an extras required over the
-                                                            allowance guide.</p>
-                                                        <div class="request-a-pickup__tab-content-extra">
-                                                            <ul
-                                                                class="list-unstyled request-a-pickup__tab-content-extra-list">
-                                                                <li>
-                                                                    <input type="checkbox" name="extra_weight"
-                                                                        id="extra_weight_3" checked="">
-                                                                    <label for="extra_weight_3"><span></span>Extra
-                                                                        Weight Over Allowance</label>
-                                                                </li>
-                                                                <li>
-                                                                    <input type="checkbox" name="extra_labour"
-                                                                        id="extra_labour_3">
-                                                                    <label for="extra_labour_3"><span></span>Extra
-                                                                        Labour Over Allowance</label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div
-                                                                class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-message-box">
-                                                                <textarea placeholder="Other Comments"
-                                                                    name="message"></textarea>
-                                                            </div>
-                                                            <div class="request-a-pickup__tab-content-btn-box">
-                                                                <button type="submit"
-                                                                    class="thm-btn request-a-pickup__tab-content-btn">Order
-                                                                    Now</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="request-a-pickup__tab-content-form-right">
-                                                <form class="request-a-pickup__tab-content-form-two">
-                                                    <div class="row">
-                                                        <div class="col-xl-12">
-                                                            <div
-                                                                class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-brief-box">
-                                                                <textarea
-                                                                    placeholder="Brief description of waste to be removed"
-                                                                    name="message"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="email" placeholder="Email Address"
-                                                                    name="email">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Subject" name="subject">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" placeholder="Pick Up Date"
-                                                                    name="date" id="datepicker2">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="text" name="time"
-                                                                    placeholder="Pick Up Time">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="request-a-pickup__tab-content-input-box">
-                                                                <input type="url"
-                                                                    placeholder="Upload File Including Photos or Videos">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
+
+                <!-- Containers Tab -->
+                <div class="tab active-tab" id="containers">
+                    <div class="request-a-pickup__tab-content">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-img">
+                                    <img src="assets/images/resources/request-a-pickup-tab-content-img-2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-form-box">
+                                    <form class="request-a-pickup__tab-content-form">
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <select class="selectpicker" aria-label="Default select example" name="waste_type_containers">
+                                                        <option selected>Select Waste Type</option>
+                                                        <option value="1">32 Gallon</option>
+                                                        <option value="2">64 Gallon</option>
+                                                        <option value="3">96 Gallon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="First Name" name="first_name_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Last Name" name="last_name_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Company Name (If Applicable)" name="company_name_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Street Address" name="address_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Post Code" name="post_code_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-brief-box">
+                                                    <textarea placeholder="Brief description of waste to be removed" name="description_containers"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="email" placeholder="Email Address" name="email_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Subject" name="subject_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Pick Up Date" name="date_containers" id="datepicker_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="time" class="custom-time-picker" placeholder="Pick Up Time" name="time_containers">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h4>Choose Your Location</h4>
+                                            </div>
+                                            <div class="col-xl-12" style="margin-bottom: 20px;">
+                                                <div id="map-containers" style="height: 400px; width: 100%; border: 1px solid #ddd;"></div>
+                                                <input type="hidden" id="latitude-containers" name="latitude_containers">
+                                                <input type="hidden" id="longitude-containers" name="longitude_containers">
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-btn-box">
+                                                    <button type="submit" class="thm-btn request-a-pickup__tab-content-btn">Order Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dumpster Tab -->
+                <div class="tab" id="dumpster">
+                    <div class="request-a-pickup__tab-content">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-img">
+                                    <img src="assets/images/resources/request-a-pickup-tab-content-img-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="request-a-pickup__tab-content-form-box">
+                                    <form class="request-a-pickup__tab-content-form">
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <select class="selectpicker" aria-label="Default select example" name="waste_type_dumpster">
+                                                        <option selected>Select Waste Type</option>
+                                                        <option value="1">32 Gallon</option>
+                                                        <option value="2">64 Gallon</option>
+                                                        <option value="3">96 Gallon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="First Name" name="first_name_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Last Name" name="last_name_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Company Name (If Applicable)" name="company_name_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Street Address" name="address_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Post Code" name="post_code_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-brief-box">
+                                                    <textarea placeholder="Brief description of waste to be removed" name="description_dumpster"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="email" placeholder="Email Address" name="email_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Subject" name="subject_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="text" placeholder="Pick Up Date" name="date_dumpster" id="datepicker_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="request-a-pickup__tab-content-input-box">
+                                                    <input type="time" class="custom-time-picker" placeholder="Pick Up Time" name="time_dumpster">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <h4>Choose Your Location</h4>
+                                            </div>
+                                            <div class="col-xl-12" style="margin-bottom: 20px;">
+                                                <div id="map-dumpster" style="height: 400px; width: 100%; border: 1px solid #ddd;"></div>
+                                                <input type="hidden" id="latitude-dumpster" name="latitude_dumpster">
+                                                <input type="hidden" id="longitude-dumpster" name="longitude_dumpster">
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="request-a-pickup__tab-content-btn-box">
+                                                    <button type="submit" class="thm-btn request-a-pickup__tab-content-btn">Order Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-        <!--Request A Pickup End-->
+        </div>
+    </div>
+</section>
+<!--Request A Pickup End-->
+
+<script>
+        $(function() {
+        // Initialize the date pickers for all sections
+        $("#datepicker_bagster").datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: 0 // Ensures that past dates cannot be selected
+        });
+        $("#datepicker_containers").datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: 0
+        });
+        $("#datepicker_dumpster").datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: 0
+        });
+    });
+    function initMap() {
+        // Default location (example: Colombo, Sri Lanka)
+        var defaultLocation = { lat: 6.9271, lng: 79.8612 };
+
+        // Initialize the map for each section
+        var mapBagster = new google.maps.Map(document.getElementById('map-bagster'), {
+            zoom: 12,
+            center: defaultLocation
+        });
+        var mapContainers = new google.maps.Map(document.getElementById('map-containers'), {
+            zoom: 12,
+            center: defaultLocation
+        });
+        var mapDumpster = new google.maps.Map(document.getElementById('map-dumpster'), {
+            zoom: 12,
+            center: defaultLocation
+        });
+
+        // Create markers for each section
+        var markerBagster = new google.maps.Marker({
+            position: defaultLocation,
+            map: mapBagster,
+            draggable: true
+        });
+        var markerContainers = new google.maps.Marker({
+            position: defaultLocation,
+            map: mapContainers,
+            draggable: true
+        });
+        var markerDumpster = new google.maps.Marker({
+            position: defaultLocation,
+            map: mapDumpster,
+            draggable: true
+        });
+
+        // Event listeners to update hidden input fields with selected coordinates
+        google.maps.event.addListener(mapBagster, 'click', function(event) {
+            var clickedLocation = event.latLng;
+            markerBagster.setPosition(clickedLocation);
+            document.getElementById('latitude-bagster').value = clickedLocation.lat();
+            document.getElementById('longitude-bagster').value = clickedLocation.lng();
+        });
+
+        google.maps.event.addListener(mapContainers, 'click', function(event) {
+            var clickedLocation = event.latLng;
+            markerContainers.setPosition(clickedLocation);
+            document.getElementById('latitude-containers').value = clickedLocation.lat();
+            document.getElementById('longitude-containers').value = clickedLocation.lng();
+        });
+
+        google.maps.event.addListener(mapDumpster, 'click', function(event) {
+            var clickedLocation = event.latLng;
+            markerDumpster.setPosition(clickedLocation);
+            document.getElementById('latitude-dumpster').value = clickedLocation.lat();
+            document.getElementById('longitude-dumpster').value = clickedLocation.lng();
+        });
+    }
+</script>
+
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -1107,6 +996,8 @@
 
     <!-- template js -->
     <script src="assets/js/wostin.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPIwUI69LTcLrwSOX8yWKqbopfZcGHJnk&callback=initMap"></script>
+
 </body>
 
 </html>
