@@ -33,4 +33,6 @@
     <link rel="stylesheet" href="assets/css/lib/audioplayer.css">
     <!-- main css -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
