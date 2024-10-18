@@ -19,13 +19,14 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="javascript:void(0)">
+                    <a href="javascript:void(0)" data-toggle="submenu" data-target="#wasteTypeManagement">
                         <iconify-icon icon="akar-icons:trash-can" class="menu-icon"></iconify-icon>
                         <span>Waste Type Management</span>
                     </a>
-                    <ul class="sidebar-submenu">
+                    <ul class="sidebar-submenu" id="wasteTypeManagement">
+                        
                         <li>
-                            <a href="invoice-list.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Waste Type Breakdown</a>
+                            <a href="invoice-list.php"><i class="ri-circle-fill circle-icon text-danger-main w-auto"></i> Waste Type Breakdown</a>
                         </li>
                         <li>
                             <a href="main-types.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Waste Types</a>
@@ -37,26 +38,25 @@
                     </ul>
                 </li>
 
+
                 <li class="dropdown">
                     <a href="javascript:void(0)">
                         <iconify-icon icon="flowbite:users-group-outline" class="menu-icon"></iconify-icon>
                         <span>User Managment</span>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li>
-                            <a href="invoice-list.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> User List</a>
-                        </li>
-                        <li>
-                            <a href="invoice-preview.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Waste Level Indicator</a>
-                        </li>
-                        <li>
-                            <a href="invoice-add.php"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> Payment Calculator</a>
-                        </li>
                         
+                        <li>
+                            <a href="radio.php"><i class="ri-circle-fill circle-icon text-orange w-auto"></i> User List</a>
+                        </li>
+                        <li>
+                            <a href="switch.php"><i class="ri-circle-fill circle-icon text-pink w-auto"></i> Waste Level Indicator</a>
+                        </li>
+                        <li>
+                            <a href="image-upload.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Payment Calculator</a>
+                        </li>
                     </ul>
                 </li>
-
-                
 
                 <li class="dropdown">
                     <a href="javascript:void(0)">
@@ -65,53 +65,40 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="invoice-list.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Area Map</a>
+                            <a href="form.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Area Map</a>
                         </li>
                         <li>
-                            <a href="invoice-preview.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> High Waste Area Indicator</a>
+                            <a href="form-layout.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> High Waste Area Indicator</a>
                         </li>
                         <li>
-                            <a href="invoice-add.php"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> High Waste Area Metrics</a>
+                            <a href="form-validation.php"><i class="ri-circle-fill circle-icon text-success-main w-auto"></i>  High Waste Area Metrics</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 
+                
+
                 <li class="dropdown">
                     <a href="javascript:void(0)">
-                        <iconify-icon icon="material-symbols:map-outline" class="menu-icon"></iconify-icon>
+                        <iconify-icon icon="solar:pie-chart-outline" class="menu-icon"></iconify-icon>
                         <span>Advanced Reporting</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="invoice-list.php"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Waste Generation Reports</a>
+                            <a href="line-chart.php"><i class="ri-circle-fill circle-icon text-danger-main w-auto"></i> Waste Generation Reports</a>
                         </li>
                         <li>
-                            <a href="invoice-preview.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> High Waste Area Report</a>
+                            <a href="column-chart.php"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> High Waste Area Report</a>
                         </li>
                         <li>
-                            <a href="invoice-add.php"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> Customer Report</a>
+                            <a href="pie-chart.php"><i class="ri-circle-fill circle-icon text-success-main w-auto"></i> Customer Report</a>
                         </li>
                         <li>
-                            <a href="invoice-edit.php"><i class="ri-circle-fill circle-icon text-danger-main w-auto"></i> Payments Report</a>
+                            <a href="pie-chart.php"><i class="ri-circle-fill circle-icon text-danger-main w-auto"></i> Payments Report</a>
                         </li>
                     </ul>
                 </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 
     
