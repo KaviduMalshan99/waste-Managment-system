@@ -1,0 +1,74 @@
+/* Waste Plan Form Styles */
+.waste-plan-form {
+    background-color: #e0e0d1; /* Matches other forms' background */
+    padding: 30px; /* Consistent padding with other forms */
+    border-radius: 10px; /* Rounded corners like other form sections */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 420px; /* Width similar to login-box */
+    width: 100%; /* Matches the login box setting */
+    margin: 100px auto; /* Centered with vertical spacing */
+    text-align: center; /* Center align the text */
+}
+
+.waste-plan-form .form-group {
+    margin-bottom: 20px; /* Space between form elements */
+    text-align: left; /* Aligns the text to the left */
+}
+
+.waste-plan-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px; /* Consistent font size with other labels */
+    color: #333; /* Dark gray color for text */
+}
+
+/* Adjusted width for select, input[type="range"], and output */
+.waste-plan-form select, 
+.waste-plan-form output {
+    width: 82%; /* Width adjusted for select and output */
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* Specific style adjustments for the scale bar */
+.waste-plan-form input[type="range"] {
+    width: 75%; /* Reduced width for the scale bar */
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #00ff00 0%, #ffff00 50%, #ff4500 100%);
+    height: 8px; /* Thicker track for better interaction */
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: auto; /* Center the scale bar */
+}
+
+.waste-plan-form input[type="range"]::-webkit-slider-thumb,
+.waste-plan-form input[type="range"]::-moz-range-thumb {
+    width: 15px; /* Size of the thumb */
+    height: 15px; /* Make thumb circular */
+    background: #fff; /* White thumb */
+    border: 2px solid #ccc; /* Gray border for thumb */
+    cursor: pointer;
+    border-radius: 10%; /* Circular shape */
+    border-color: #000;
+    box-shadow: 0 0 4px #000; /* Subtle shadow for depth */
+}
+
+.waste-plan-form button {
+    background-color: #404A3D; /* Green background as in other buttons */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Slightly larger font for readability */
+    width: 100%; /* Full width button */
+    margin-top: 20px; /* Margin on top for spacing */
+}
+
+.waste-plan-form button:hover {
+    background-color: #000000; /* Darker green on hover */
+}
