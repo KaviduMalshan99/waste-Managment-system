@@ -18,6 +18,16 @@ if ($result->num_rows > 0) {
         $locations[] = $row;
     }
 }
+
+// Fetch all collected locations
+$sql_collected = "SELECT * FROM waste_pickups WHERE collected = 1";
+$result_collected = $conn->query($sql_collected);
+$collectedLocations = [];
+if ($result_collected->num_rows > 0) {
+    while ($row = $result_collected->fetch_assoc()) {
+        $collectedLocations[] = $row;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +60,7 @@ if ($result->num_rows > 0) {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .location-list {
+        .location-list, .collected-list {
             margin-top: 20px;
             background-color: #fff;
             padding: 20px;
@@ -76,7 +86,7 @@ if ($result->num_rows > 0) {
 
         button {
             padding: 8px 15px;
-            background-color: #ff3c00;
+            background-color: #4CAF50; /* Light green color */
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -85,7 +95,7 @@ if ($result->num_rows > 0) {
         }
 
         button:hover {
-            background-color: #e83500;
+            background-color: #45a049; /* Darker green on hover */
         }
 
         .directions-panel {
@@ -141,6 +151,23 @@ if ($result->num_rows > 0) {
     <div class="directions-panel">
         <h2>Turn-by-Turn Instructions</h2>
         <ul id="directions-panel"></ul>
+    </div>
+
+    <div class="collected-list">
+        <h2>Collected Locations</h2>
+        <?php if (!empty($collectedLocations)) { ?>
+            <?php foreach ($collectedLocations as $collectedLocation) { ?>
+                <div class="location-item">
+                    <div>
+                        <strong><?php echo $collectedLocation['first_name'] . ' ' . $collectedLocation['last_name']; ?></strong><br>
+                        Address: <?php echo $collectedLocation['address']; ?><br>
+                        Latitude: <?php echo $collectedLocation['latitude']; ?>, Longitude: <?php echo $collectedLocation['longitude']; ?>
+                    </div>
+                </div>
+            <?php } ?>
+        <?php } else { ?>
+            <p>No collected locations available.</p>
+        <?php } ?>
     </div>
 
     <!-- Google Maps script should come after the map div -->

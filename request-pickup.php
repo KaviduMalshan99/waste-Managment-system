@@ -396,7 +396,7 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            <div class="page-header-bg" style="background-image: url(req_bg.png)">
             </div>
             <div class="container">
                 <div class="page-header__inner">
@@ -443,7 +443,7 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-img">
-                                    <img src="assets/images/resources/request-a-pickup-tab-content-img-1.jpg" alt="">
+                                    <img src="2.png" alt="">
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -537,7 +537,7 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-img">
-                                    <img src="assets/images/resources/request-a-pickup-tab-content-img-2.jpg" alt="">
+                                    <img src="1.png" alt="">
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -631,7 +631,7 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="request-a-pickup__tab-content-img">
-                                    <img src="assets/images/resources/request-a-pickup-tab-content-img-3.jpg" alt="">
+                                    <img src="3.png" alt="">
                                 </div>
                             </div>
                             <div class="col-xl-6">

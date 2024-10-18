@@ -37,39 +37,68 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Waste type, depending on the form
     $wasteType = $_POST['waste_type_bagster'] ?? $_POST['waste_type_containers'] ?? $_POST['waste_type_dumpster'];
 
-    // Generate a unique pickup ID
-    $pickupId = generateUniqueId();
+    // Check if there is already a pickup scheduled for the same date and time
+    $check_sql = "SELECT * FROM waste_pickups WHERE pickup_date = ? AND pickup_time = ?";
+    $check_stmt = $conn->prepare($check_sql);
+    $check_stmt->bind_param("ss", $date, $time);
+    $check_stmt->execute();
+    $check_result = $check_stmt->get_result();
 
-    // SQL query to insert data into the table
-    $sql = "INSERT INTO waste_pickups (pickup_id, first_name, last_name, company_name, address, post_code, description, email, subject, pickup_date, pickup_time, latitude, longitude, waste_type)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-    // Prepare and bind the query
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssssssssssss", $pickupId, $firstName, $lastName, $companyName, $address, $postCode, $description, $email, $subject, $date, $time, $latitude, $longitude, $wasteType);
-
-    // Execute the query
-    if ($stmt->execute()) {
-        // Show success message and wait for the user to click OK before redirecting
+    if ($check_result->num_rows > 0) {
+        // Record already exists for the same date and time, show error message
         echo "
         <html>
         <head>
             <script type='text/javascript'>
-                alert('Your order has been placed successfully!');
-                window.location.href = 'index.php'; // Redirect to home page after clicking OK
+                alert('A pickup is already scheduled for this date and time. Please choose a different time slot.');
+                window.history.back(); // Go back to the form
             </script>
         </head>
         <body>
-            <h2>Your order has been placed successfully! You will be redirected to the home page shortly after clicking OK.</h2>
+            <h2>A pickup is already scheduled for this date and time. Please choose a different time slot.</h2>
         </body>
         </html>
         ";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // No conflict, proceed with saving the data
+
+        // Generate a unique pickup ID
+        $pickupId = generateUniqueId();
+
+        // SQL query to insert data into the table
+        $sql = "INSERT INTO waste_pickups (pickup_id, first_name, last_name, company_name, address, post_code, description, email, subject, pickup_date, pickup_time, latitude, longitude, waste_type)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        // Prepare and bind the query
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssssssssssssss", $pickupId, $firstName, $lastName, $companyName, $address, $postCode, $description, $email, $subject, $date, $time, $latitude, $longitude, $wasteType);
+
+        // Execute the query
+        if ($stmt->execute()) {
+            // Show success message and wait for the user to click OK before redirecting
+            echo "
+            <html>
+            <head>
+                <script type='text/javascript'>
+                    alert('Your order has been placed successfully!');
+                    window.location.href = 'index.php'; // Redirect to home page after clicking OK
+                </script>
+            </head>
+            <body>
+                <h2>Your order has been placed successfully! You will be redirected to the home page shortly after clicking OK.</h2>
+            </body>
+            </html>
+            ";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        // Close the statement and connection
+        $stmt->close();
     }
 
-    // Close the statement and connection
-    $stmt->close();
+    // Close the check statement
+    $check_stmt->close();
     $conn->close();
 }
 ?>
