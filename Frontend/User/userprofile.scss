@@ -1,0 +1,104 @@
+// Variables
+$background-base: #f4f4f4;
+$font-base: Arial, sans-serif;
+$background-card: #9b9696;
+$shadow-base: 0 0 10px rgba(0, 0, 0, 0.1);
+$input-border: #ccc;
+$btn-bg: #000;
+$btn-text: #fff;
+$btn-radius: 5px;
+
+body {
+    font-family: $font-base;
+    background: $background-base;
+    margin: 0;
+    padding: 20px;
+}
+
+.profile-container {
+    background:#e0e0d1;
+    width: 40%;
+    margin: 0 auto;
+    padding: 50px;
+    margin-top: 100px;
+    box-shadow:#000;
+    border-radius: 20px;
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .profile-picture {
+        text-align: center;
+        margin-bottom: 20px;
+
+        .image-placeholder {
+            width: 140px;
+            height: 140px;
+            background: #ffffff;
+            border-radius: 50%;
+            font-size:120px ;
+            margin-left: 260px;
+            display: flex;
+            text-align: center;
+            justify-content: center; // Centers the content horizontally
+            color: #fff; // White text color
+        }
+
+        .btn-update {
+            background:#404A3D;
+            color:#fff;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius:20px;
+            margin-top: 10px;
+            font-size: 18px;
+            width: 180px;
+        }
+    }
+
+    .profile-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 40px;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            
+            
+            label {
+                margin-bottom: 10px;
+                font-size:18px;
+                
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                padding: 10px;
+                border: 2px solid #000000;
+                border-radius: 20px;
+                font-size:16px;
+                &:focus {
+                    border-color: darken($input-border, 20%);
+                }
+            }
+        }
+
+        .btn-save {
+            background:#404A3D;
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius:20px;
+            grid-column: span 2;
+            font-size: 18px;
+        }
+    }
+}
