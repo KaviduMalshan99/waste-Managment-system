@@ -1,17 +1,10 @@
 <?php
-// Step 1: Database connection
-$servername = "localhost";
-$username = "root";  // Your MySQL username
-$password = "";      // Your MySQL password (default is empty for XAMPP)
-$dbname = "waste_management";
+// Include the Singleton Database class
+include './server/db_connect1.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Get the database instance and connection
+$db = Database::getInstance();
+$conn = $db->getConnection();
 
 // Function to generate a unique ID
 function generateUniqueId() {

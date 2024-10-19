@@ -1,29 +1,17 @@
 <?php
-// Include the Singleton Database class
-include './server/db_connect1.php';
+include '../server/db_connect1.php'; 
+include '../models/LocationModel.php';
+include '../controllers/LocationController.php';
 
-// Get the database instance and connection
-$db = Database::getInstance();
-$conn = $db->getConnection();
-// Fetch all locations that are not marked as collected
-$sql = "SELECT * FROM waste_pickups WHERE collected = 0";
-$result = $conn->query($sql);
-$locations = [];
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $locations[] = $row;
-    }
-}
+// Create a new LocationModel instance
+$model = new LocationModel($conn);
 
-// Fetch all collected locations
-$sql_collected = "SELECT * FROM waste_pickups WHERE collected = 1";
-$result_collected = $conn->query($sql_collected);
-$collectedLocations = [];
-if ($result_collected->num_rows > 0) {
-    while ($row = $result_collected->fetch_assoc()) {
-        $collectedLocations[] = $row;
-    }
-}
+// Create a new LocationController instance
+$controller = new LocationController($model);
+
+// Fetch locations from the controller
+$locations = $controller->getUncollectedLocations();
+$collectedLocations = $controller->getCollectedLocations();
 ?>
 
 <!DOCTYPE html>
@@ -33,95 +21,12 @@ if ($result_collected->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waste Collection Map</title>
-    <!-- Add modern CSS styles here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background-color: #f4f5f7;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        #map {
-            height: 500px;
-            width: 100%;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .location-list, .collected-list {
-            margin-top: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .location-item {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .location-item:last-child {
-            border-bottom: none;
-        }
-
-        .location-item div {
-            flex: 1;
-        }
-
-        button {
-            padding: 8px 15px;
-            background-color: #4CAF50; /* Light green color */
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #45a049; /* Darker green on hover */
-        }
-
-        .directions-panel {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .directions-panel h2 {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .directions-panel ul {
-            padding-left: 20px;
-        }
-
-        .directions-panel li {
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <h1>Waste Collection Map</h1>
-    <div id="map"></div> <!-- Ensure the map div is here -->
+    <div id="map"></div>
 
     <div class="location-list">
         <h2>Locations to Collect</h2>
@@ -144,11 +49,6 @@ if ($result_collected->num_rows > 0) {
         <?php } ?>
     </div>
 
-    <div class="directions-panel">
-        <h2>Turn-by-Turn Instructions</h2>
-        <ul id="directions-panel"></ul>
-    </div>
-
     <div class="collected-list">
         <h2>Collected Locations</h2>
         <?php if (!empty($collectedLocations)) { ?>
@@ -166,8 +66,8 @@ if ($result_collected->num_rows > 0) {
         <?php } ?>
     </div>
 
-    <!-- Google Maps script should come after the map div -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPIwUI69LTcLrwSOX8yWKqbopfZcGHJnk&callback=initMap"></script>
+      <!-- Google Maps script should come after the map div -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPIwUI69LTcLrwSOX8yWKqbopfZcGHJnk&callback=initMap"></script>
     <script>
         var map, directionsService, directionsRenderer, userLocation, destination, currentPickupId;
 

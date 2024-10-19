@@ -1,14 +1,10 @@
 <?php
-// Include the DB connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "waste_management";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the Singleton Database class
+include './server/db_connect1.php';
 
+// Get the database instance and connection
+$db = Database::getInstance();
+$conn = $db->getConnection();
 $pickupId = $_GET['pickup_id']; // Get pickup ID from the URL
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
