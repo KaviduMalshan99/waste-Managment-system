@@ -1,7 +1,7 @@
-// Variables
+// Variables for maintaining consistent styling
 $background-base: #f4f4f4;
 $font-base: Arial, sans-serif;
-$background-card: #9b9696;
+$background-card: #9b9696; // not used in the provided code snippet
 $shadow-base: 0 0 10px rgba(0, 0, 0, 0.1);
 $input-border: #ccc;
 $btn-bg: #000;
@@ -16,13 +16,13 @@ body {
 }
 
 .profile-container {
-    background:#e0e0d1;
+    background: #e0e0d1;
     width: 40%;
     margin: 0 auto;
     padding: 50px;
-    margin-top: 100px;
-    box-shadow:#000;
-    border-radius: 20px;
+    margin-top: -800px;
+    box-shadow: $shadow-base; // Using variable for consistent shadow
+    border-radius: 100px;
     
     h1 {
         text-align: center;
@@ -38,23 +38,26 @@ body {
             height: 140px;
             background: #ffffff;
             border-radius: 50%;
-            font-size:120px ;
-            margin-left: 260px;
+            font-size: 120px;
             display: flex;
-            text-align: center;
+            align-items: center; // Ensures vertical centering
             justify-content: center; // Centers the content horizontally
-            color: #fff; // White text color
+            color: #404A3D; // Changed from #fff to enhance visibility on white background
+            margin: 0 auto; // Centering placeholder in the container
         }
 
         .btn-update {
-            background:#404A3D;
+            background: #404A3D;
             color:#fff;
             border: none;
             padding: 15px 25px;
             cursor: pointer;
-            border-radius:20px;
+            border-radius: $btn-radius;
             margin-top: 10px;
             font-size: 18px;
+            display: block; // Ensures the button is centered
+            margin-left:200px;
+            margin-right:0px;
             width: 180px;
         }
     }
@@ -68,37 +71,40 @@ body {
         .form-group {
             display: flex;
             flex-direction: column;
-            
-            
+
             label {
                 margin-bottom: 10px;
-                font-size:18px;
-                
+                font-size: 18px;
             }
 
             input[type="text"],
             input[type="email"],
             input[type="password"] {
                 padding: 10px;
-                border: 2px solid #000000;
-                border-radius: 20px;
-                font-size:16px;
+                border: 2px solid $input-border;
+                border-radius: $btn-radius;
+                font-size: 16px;
+                
                 &:focus {
                     border-color: darken($input-border, 20%);
                 }
             }
         }
 
-        .btn-save {
-            background:#404A3D;
-            color: #fff;
+        .btn-save, .btn-pac {
+            background:#000000;
+            color: $btn-text;
             border: none;
             padding: 15px 25px;
             margin-top: 15px;
             cursor: pointer;
-            border-radius:20px;
+            border-radius: $btn-radius;
             grid-column: span 2;
             font-size: 18px;
+        }
+
+        .btn-pac {
+            background-color: darken($btn-bg, 10%); // Slightly darker for differentiation
         }
     }
 }
