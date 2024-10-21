@@ -29,10 +29,7 @@
         <div class="col-xxl-4 col-sm-6">
             <div class="card h-100 radius-12 bg-gradient-primary text-center">
                 <div class="card-body p-24">
-                    <!-- Use image_url from database -->
-                    <?php if (!empty($row['image_url'])): ?>
-                        <img src="<?php echo $row['image_url']; ?>" alt="Package Image" class="w-100 h-auto mb-16 radius-12">
-                    <?php endif; ?>
+                    
                     
                     <h6 class="mb-8"><?php echo $row['package_name']; ?></h6>
                     <p class="card-text mb-8 text-secondary-light"><?php echo $row['description']; ?></p>

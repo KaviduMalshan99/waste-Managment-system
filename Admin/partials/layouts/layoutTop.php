@@ -3,6 +3,8 @@
 <html lang="en" data-theme="light">
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <?php include './partials/head.php' ?>
 

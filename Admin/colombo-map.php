@@ -9,38 +9,62 @@
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <style>
         #map {
-            height: 600px;
-            width: 100%;
+            height: 500px;
+            width: 80%;
+            margin: auto; /* Center the map */
         }
     </style>
 </head>
 <body>
 
-<h2>Map of Registered Users</h2>
+<?php 
+    $title = 'Map of Registered Users';
+    $subTitle = 'Components / Users Map';
+?>
+
+<?php include './partials/layouts/layoutTop.php' ?>
+
 <!-- Map container -->
 <div id="map"></div>
+
+<?php
+    // Include the Singleton Database class
+    include '../server/database.php'; // Ensure this path is correct
+
+    // Get the database connection instance
+    $dbInstance = Database::getInstance();
+    $conn = $dbInstance->getConnection();
+
+    // Prepare an array to hold user data
+    $users = [];
+
+    // Fetch users with non-null latitude and longitude
+    $sql = "SELECT name, latitude, longitude, street_address, city FROM users WHERE latitude IS NOT NULL AND longitude IS NOT NULL";
+    $result = $conn->query($sql);
+
+    // Check if the query was successful and fetch the data
+    if ($result && $result->num_rows > 0) {
+        // Store user data in the array
+        while ($row = $result->fetch_assoc()) {
+            $users[] = $row;
+        }
+
+        // Pass the users data to JavaScript
+        echo "<script>var users = " . json_encode($users) . ";</script>";
+    } else {
+        echo "<script>console.warn('No users found with latitude and longitude');</script>";
+    }
+
+    // No need to close the database connection as it's managed by the Singleton class
+?>
 
 <!-- Leaflet JavaScript -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 <script>
-// Sample users with addresses (latitude, longitude, name)
-var users = [
-    {name: "User 1", lat: 6.9271, lon: 79.8612, address: "Colombo"},
-    {name: "User 2", lat: 6.9345, lon: 79.8428, address: "Colombo 02"},
-    {name: "User 3", lat: 6.9681, lon: 79.8745, address: "Colombo 05"},
-    {name: "User 4", lat: 6.8500, lon: 79.8800, address: "Moratuwa"},
-    {name: "User 5", lat: 6.8214, lon: 80.0409, address: "Panadura"},
-    {name: "User 6", lat: 7.0874, lon: 79.8894, address: "Negombo"},
-    {name: "User 7", lat: 6.8650, lon: 79.8994, address: "Mount Lavinia"},
-    {name: "User 8", lat: 6.7852, lon: 79.8946, address: "Kalutara"},
-    {name: "User 9", lat: 6.9571, lon: 79.8820, address: "Rajagiriya"},
-    {name: "User 10", lat: 6.9779, lon: 79.8728, address: "Borella"}
-];
-
-// Initialize the map and set its view to Western Province
-var map = L.map('map').setView([6.9271, 79.8612], 10);
+// Initialize the map and set its view to a central location
+var map = L.map('map').setView([6.9271, 79.8612], 10); // Adjust this based on your data
 
 // Add OpenStreetMap tile layer
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -48,13 +72,29 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Loop through the users and add markers with popups
-users.forEach(function(user) {
-    var marker = L.marker([user.lat, user.lon]).addTo(map);
-    marker.bindPopup("<b>" + user.name + "</b><br>Address: " + user.address).openPopup();
-});
+// Debug: Check if users array is passed correctly
+console.log('Users array in JavaScript:', users);
 
+// Check if there are users to display
+if (users.length > 0) {
+    // Loop through the users fetched from the database
+    users.forEach(function(user) {
+        if (user.latitude && user.longitude) {
+            // Ensure latitude and longitude are treated as numbers
+            var lat = parseFloat(user.latitude);
+            var lng = parseFloat(user.longitude);
+            var marker = L.marker([lat, lng]).addTo(map);
+            marker.bindPopup("<b>" + user.name + "</b><br>Address: " + user.street_address + ", " + user.city);
+        } else {
+            console.warn('User with invalid location data:', user);
+        }
+    });
+} else {
+    alert("No users to display on the map.");
+}
 </script>
 
 </body>
 </html>
+
+<?php include './partials/layouts/layoutBottom.php' ?>
