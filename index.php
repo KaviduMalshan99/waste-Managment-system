@@ -67,7 +67,7 @@
                         <div class="main-menu__menu-top-left">
                             <p class="main-menu__menu-top-text">Welcome To Waste Disposal & Pickup Services.</p>
                             <div class="main-menu__menu-top-btn-box">
-                                <a href="request-pickup.html" class="thm-btn main-menu__menu-top-btn">Request a
+                                <a href="request-pickup.php" class="thm-btn main-menu__menu-top-btn">Request a
                                     Pickup</a>
                             </div>
                         </div>
@@ -304,7 +304,7 @@
 											<li><a href="projects-carousel.html">Projects Carousel</a></li>
 											<li><a href="project-details.html">Project Details</a></li>
 											<li><a href="pricing.html">Pricing</a></li>
-											<li><a href="request-pickup.html">Request A Pickup</a></li>
+											<li><a href="request-pickup.php">Request A Pickup</a></li>
 											<li><a href="staff.html">Staff</a></li>
 											<li><a href="staff-carousel.html">Staff Carousel</a></li>
 											<li><a href="staff-details.html">Staff Details</a></li>
@@ -375,7 +375,7 @@
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
                                         <h2>Your Clutter is <br> Our Bread <span>&</span> Butter</h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
+                                        <a href="request-pickup.php" class="thm-btn">Request a Pickup</a>
                                     </div>
                                 </div>
                             </div>
@@ -392,7 +392,7 @@
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
                                         <h2>Your Clutter is <br> Our Bread <span>&</span> Butter</h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
+                                        <a href="request-pickup.php" class="thm-btn">Request a Pickup</a>
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +409,7 @@
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
                                         <h2>Your Clutter is <br> Our Bread <span>&</span> Butter</h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
+                                        <a href="request-pickup.php" class="thm-btn">Request a Pickup</a>
                                     </div>
                                 </div>
                             </div>
@@ -1330,7 +1330,7 @@
                                 <h3 class="footer-widget__title">Links</h3>
                                 <ul class="footer-widget__links-list list-unstyled clearfix">
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="request-pickup.html">Request Pickup</a></li>
+                                    <li><a href="request-pickup.php">Request Pickup</a></li>
                                     <li><a href="about.html">Management</a></li>
                                     <li><a href="services.html">Start Service</a></li>
                                     <li><a href="contact.html">Contact</a></li>
